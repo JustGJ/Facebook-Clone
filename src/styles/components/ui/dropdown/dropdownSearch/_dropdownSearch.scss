@@ -1,0 +1,28 @@
+.dropdownSearch {
+    position: absolute;
+    width: 320px;
+    height: 517px;
+    top: 0;
+    left: 0;
+    padding: 50px 15px 15px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
+    transform: translateY(0);
+    transition: 0.1s ease-in;
+    box-sizing: border-box;
+    opacity: 1;
+    z-index: -1;
+
+    h3 {
+      padding-left: 16px;
+    }
+
+    &--hidden {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+}
+
+
+
