@@ -8,21 +8,9 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
-    transform: translateY(0);
-    transition: 0.1s ease-in;
     box-sizing: border-box;
-    opacity: 1;
-    z-index: -1;
 
     h3 {
       padding-left: 16px;
     }
-
-    &--hidden {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
 }
-
-
-

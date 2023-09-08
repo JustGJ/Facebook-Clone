@@ -1,9 +1,8 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import PrivateRoute from './components/router/PrivateRoute';
-import "./styles/main.scss";
+import Home from "@pages/Home";
+import Login from "@pages/Login";
+import PrivateRoute from '@components/router/PrivateRoute';
 
 const queryClient = new QueryClient();
 

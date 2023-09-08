@@ -3,12 +3,13 @@ import { AiOutlineSearch, AiFillHome } from 'react-icons/ai';
 import { IoMdNotifications } from 'react-icons/io';
 import { CgProfile } from 'react-icons/cg';
 import { useEffect, useRef, useState } from 'react';
-import DropdownSearch from '@components/ui/dropdown/dropdownSearch/DropdownSearch';
+import DropdownSearch from '@components/ui/dropdowns/dropdownSearch/DropdownSearch';
 import { isClassNameHidden } from '@utils/index';
+import Fade from '@components/Fade';
 
 const Navbar = () => {
-  const [isOpenSearch, setIsOpenSearch] = useState<boolean>(false);
-  const searchRef = useRef<HTMLInputElement>(null);
+  const [isOpenSearch, setIsOpenSearch] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
 
   const actionButtons = [
     { id: 0, icon: <BsMessenger /> },
@@ -38,7 +39,9 @@ const Navbar = () => {
         <div ref={searchRef} className="navbar__search__content">
           <AiOutlineSearch className={isClassNameHidden(isOpenSearch, "navbar__search-icon")} />
           <input onFocus={() => setIsOpenSearch(true)} className="navbar__search-input" type="text" placeholder="Rechercher sur Facebook" />
-          <DropdownSearch isOpenSearch={isOpenSearch} />
+          <Fade visible={isOpenSearch}>
+            <DropdownSearch />
+          </Fade>
         </div>
       </div>
       <button className="navbar__navigation">
