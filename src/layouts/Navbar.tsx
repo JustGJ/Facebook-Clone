@@ -1,14 +1,14 @@
+import { useEffect, useRef, useState } from 'react';
 import { BsFacebook, BsMessenger, BsArrowLeft } from 'react-icons/bs';
 import { AiOutlineSearch, AiFillHome } from 'react-icons/ai';
 import { IoMdNotifications } from 'react-icons/io';
 import { CgProfile } from 'react-icons/cg';
-import { useEffect, useRef, useState } from 'react';
-import DropdownSearch from '@components/ui/dropdowns/dropdownSearch/DropdownSearch';
-import { isClassNameHidden } from '@utils/index';
-import Fade from '@components/Fade';
+import DropdownSearch from '@components/ui/dropdowns/dropdownSearch';
+import ButtonIcon from '@components/ui/Buttons/ButtonIcon';
+import { ArrowButton, LogoFacebookButton, NavbarActions, NavbarContainer, NavbarSearch, NavigationButton, SearchContent, SearchInput } from './navbarStyled';
 
 const Navbar = () => {
-  const [isOpenSearch, setIsOpenSearch] = useState(false);
+  const [isOpenSearch, setIsOpenSearch] = useState<boolean>(false);
   const searchRef = useRef<HTMLDivElement>(null);
 
   const actionButtons = [
@@ -28,33 +28,31 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className="navbar">
-      <div className="navbar__search">
-        <button className={isClassNameHidden(!isOpenSearch, 'navbar__arrow')}>
+    <NavbarContainer>
+      <NavbarSearch>
+        <ArrowButton $isOpenSearch={isOpenSearch}>
           <BsArrowLeft />
-        </button>
-        <button className={isClassNameHidden(isOpenSearch, 'navbar__fbLogo')}>
+        </ArrowButton>
+        <LogoFacebookButton $isOpenSearch={isOpenSearch}>
           <BsFacebook />
-        </button>
-        <div ref={searchRef} className="navbar__search__content">
-          <AiOutlineSearch className={isClassNameHidden(isOpenSearch, "navbar__search-icon")} />
-          <input onFocus={() => setIsOpenSearch(true)} className="navbar__search-input" type="text" placeholder="Rechercher sur Facebook" />
-          <Fade visible={isOpenSearch}>
-            <DropdownSearch />
-          </Fade>
-        </div>
-      </div>
-      <button className="navbar__navigation">
+        </LogoFacebookButton>
+          <SearchContent ref={searchRef} $isOpenSearch={isOpenSearch}>
+          <AiOutlineSearch />
+          <SearchInput onFocus={() => setIsOpenSearch(true)} type="text" placeholder="Rechercher sur Facebook" />
+          { isOpenSearch && <DropdownSearch  /> }
+        </SearchContent>
+      </NavbarSearch>
+      <NavigationButton>
         <AiFillHome />
-      </button>
-      <div className="navbar__actions">
+      </NavigationButton>
+      <NavbarActions>
         {actionButtons.map((actionButton) => (
-          <button key={actionButton.id} className="navbar__actions-btn">
+          <ButtonIcon key={actionButton.id}>
             {actionButton.icon}
-          </button>
+          </ButtonIcon>
         ))}
-      </div>
-    </nav>
+      </NavbarActions>
+    </NavbarContainer>
   )
 }
 

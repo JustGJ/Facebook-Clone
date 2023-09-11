@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useQuery } from "react-query";
 import { useUserStore } from "@business/useUserStore";
 import DropdownSearchItem from "./DropdownSearchItem";
+import { StyledDropdownSearch, Title } from "./dropdownSearchStyled";
 
 const DropdownSearch = () => {
   const { users, setUsers } = useUserStore();
@@ -20,14 +21,14 @@ const DropdownSearch = () => {
   if(isError) return <p>Error</p>
 
   return (
-    <div className="dropdownSearch">
-      <h3>Récent</h3>
+    <StyledDropdownSearch>
+      <Title>Récent</Title>
       <ul>
         {users.map(((user) => (
           <DropdownSearchItem key={user.id} name={user.name} />
         )))}
       </ul>
-    </div>
+    </StyledDropdownSearch>
   )
 }
 
