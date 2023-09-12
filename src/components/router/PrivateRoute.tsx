@@ -1,24 +1,22 @@
-import React from 'react';
-import { Navigate } from 'react-router-dom';
-import Navbar from '@layouts/Navbar';
+import React from "react";
+import { Navigate } from "react-router-dom";
+import Navbar from "@layouts/Navbar";
 
 interface IProps {
-    children: React.JSX.Element;
+  children: React.JSX.Element;
 }
 const PrivateRoute = ({ children }: IProps) => {
-    const isAuth = true;
+  const isAuth = true;
 
-    if (!isAuth) {
-        return <Navigate to="/login" />
-    }
-    return (
-        <>
-            <Navbar />
-            <main>
-                {children}
-            </main>
-        </>
-    )
-}
+  if (!isAuth) {
+    return <Navigate to="/login" />;
+  }
+  return (
+    <>
+      <Navbar />
+      <main>{children}</main>
+    </>
+  );
+};
 
-export default PrivateRoute
+export default PrivateRoute;
