@@ -1,8 +1,8 @@
 import { BsMessenger } from "react-icons/bs";
 import { IoMdNotifications } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
-import { StyledNavbarActions } from "./NavbarStyled";
-import ButtonIcon from "@components/ui/buttons/ButtonIcon";
+import { StyledNavbarActions } from "./styled";
+import ButtonIcon from "@components/common/buttons/ButtonIcon";
 
 const NavbarActions = () => {
   const actionButtons = [

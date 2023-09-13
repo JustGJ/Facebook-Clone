@@ -1,4 +1,4 @@
-import { NavigationButton } from "./NavbarStyled";
+import { NavigationButton } from "./styled";
 import { AiFillHome } from "react-icons/ai";
 
 const NavbarNavigation = () => {

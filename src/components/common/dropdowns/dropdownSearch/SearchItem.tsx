@@ -1,4 +1,4 @@
-import { Item, Picture, PictureContent, Name } from "./DropdownSearchStyled";
+import { Item, Picture, PictureContent, Name } from "./styled";
 
 interface DropdownSearchItemProps {
   key: number;

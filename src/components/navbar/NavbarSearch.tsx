@@ -5,10 +5,10 @@ import {
   SearchContent,
   SearchInput,
   StyledNavbarSearch,
-} from "./NavbarStyled";
+} from "./styled";
 import { BsArrowLeft, BsFacebook } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
-import DropdownSearch from "@components/ui/dropdowns/dropdownSearch";
+import DropdownSearch from "@components/common/dropdowns/dropdownSearch";
 
 const NavbarSearch = () => {
   const [isOpenSearch, setIsOpenSearch] = useState<boolean>(false);

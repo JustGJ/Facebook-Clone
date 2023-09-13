@@ -1,11 +1,7 @@
-import styled from "styled-components";
 import { box, flexLayout } from "@styles/helpers";
+import styled from "styled-components";
 
-interface IButtonIconProps {
-  children: React.ReactNode;
-}
-
-const StyledButtonIcon = styled.button`
+export const StyledButtonIcon = styled.button`
   ${flexLayout({ display: "flex-center" })}
   ${box("40px")};
   border-radius: 50%;
@@ -20,8 +16,3 @@ const StyledButtonIcon = styled.button`
     ${box("18px")};
   }
 `;
-const ButtonIcon = ({ children }: IButtonIconProps) => {
-  return <StyledButtonIcon>{children}</StyledButtonIcon>;
-};
-
-export default ButtonIcon;

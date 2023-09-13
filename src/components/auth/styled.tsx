@@ -8,7 +8,7 @@ export const DefaultButton = styled.button`
   cursor: pointer;
   font-weight: 600;
 `;
-export const LoginForm = styled.form`
+export const StyledLoginForm = styled.form`
   position: absolute;
   width: 396px;
   height: 350px;

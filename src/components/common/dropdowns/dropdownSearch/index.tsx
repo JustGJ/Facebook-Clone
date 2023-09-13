@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import { useQuery } from "react-query";
 import { useUserStore } from "@business/useUserStore";
-import DropdownSearchItem from "./DropdownSearchItem";
-import { StyledDropdownSearch, Title } from "./DropdownSearchStyled";
-import Fade from "@components/ui/Fade";
+import SearchItem from "./SearchItem";
+import { StyledDropdownSearch, Title } from "./styled";
+import Fade from "@components/common/Fade";
 
 interface IDropdownSearchProps {
   setIsOpenSearch: (value: boolean) => void;
@@ -46,7 +46,7 @@ const DropdownSearch = ({
         <Title>Récent</Title>
         <ul>
           {users.slice(0, 8).map((user) => (
-            <DropdownSearchItem key={user.id} name={user.name} />
+            <SearchItem key={user.id} name={user.name} />
           ))}
         </ul>
       </StyledDropdownSearch>

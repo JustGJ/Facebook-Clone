@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import Navbar from "@layouts/Navbar";
+import Navbar from "@components/navbar";
 
 interface IProps {
   children: React.JSX.Element;

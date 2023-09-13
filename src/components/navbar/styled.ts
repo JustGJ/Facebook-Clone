@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { box, flexLayout } from "@styles/helpers";
 
-export const NavbarContainer = styled.nav`
+export const StyledNavbar = styled.nav`
   ${flexLayout({ display: "flex-center-vert" })}
   justify-content: space-between;
   height: 54px;
