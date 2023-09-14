@@ -1,11 +1,11 @@
-import { StyledPosts } from "./styled";
+import { PostsContainer } from "./styled";
 import CreatePost from "@components/common/cards/CreatePost";
 
 const Posts = () => {
   return (
-    <StyledPosts>
+    <PostsContainer>
       <CreatePost />
-    </StyledPosts>
+    </PostsContainer>
   );
 };
 

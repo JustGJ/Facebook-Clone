@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { box, flexLayout } from "@styles/helpers";
 
-export const StyledNavbar = styled.nav`
+export const NavbarContainer = styled.nav`
   ${flexLayout({ display: "flex-center-vert" })}
   justify-content: space-between;
   height: 54px;
@@ -9,7 +9,7 @@ export const StyledNavbar = styled.nav`
   background-color: ${({ theme }) => theme.white};
   z-index: 2;
 `;
-export const StyledNavbarSearch = styled.div`
+export const NavbarSearchContainer = styled.div`
   ${flexLayout({ display: "flex-center-vert" })}
   width: 360px;
   padding: 0 16px;
@@ -64,7 +64,7 @@ export const NavigationButton = styled.button`
     ${box("27px")};
   }
 `;
-export const StyledNavbarActions = styled.div`
+export const NavbarActionsContainer = styled.div`
   ${flexLayout({ display: "flex-center-vert" })}
   justify-content: space-evenly;
   ${box("184px", "100%")};

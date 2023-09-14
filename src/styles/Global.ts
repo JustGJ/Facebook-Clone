@@ -11,7 +11,7 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   font-size: 1rem;
-  background-color: ${({theme}) => theme.background};
+  background-color: ${({ theme }) => theme.background};
   line-height: 1;
 }
 h1,
@@ -78,5 +78,4 @@ select {
     scroll-behavior: auto !important;
   }
 }
-`
-
+`;

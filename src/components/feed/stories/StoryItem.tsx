@@ -1,4 +1,4 @@
-import { StyledStoryItem } from "./styled";
+import { Picture, StoryItemContainer } from "./styled";
 
 interface IStoryItemProps {
   name?: string;
@@ -6,9 +6,9 @@ interface IStoryItemProps {
 }
 const StoryItem = ({ avatar }: IStoryItemProps) => {
   return (
-    <StyledStoryItem>
-      <img src={avatar} alt="" />
-    </StyledStoryItem>
+    <StoryItemContainer>
+      <Picture src={avatar} alt="picture story" />
+    </StoryItemContainer>
   );
 };
 

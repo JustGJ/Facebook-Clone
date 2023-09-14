@@ -1,11 +1,27 @@
-import { StyledCreatePost } from "./styled";
+import {
+  CreatePostInput,
+  PhotoVideoIcon,
+  PhotoVideoButton,
+  Text,
+  CreatePostContainer,
+  CreatePostHeader,
+} from "./styled";
+import { Divider } from "@components/common/Divider";
+import ButtonProfile from "@components/common/buttons/ButtonProfile";
 
 const CreatePost = () => {
   return (
-    <StyledCreatePost>
-      <img src="" alt="" />
-      <input type="text" placeholder="" />
-    </StyledCreatePost>
+    <CreatePostContainer>
+      <CreatePostHeader>
+        <ButtonProfile src="https://picsum.photos/200/300" />
+        <CreatePostInput type="text" placeholder="Quoi de neuf, Jeff ?" />
+      </CreatePostHeader>
+      <Divider />
+      <PhotoVideoButton>
+        <PhotoVideoIcon />
+        <Text>Photo / vidéo</Text>
+      </PhotoVideoButton>
+    </CreatePostContainer>
   );
 };
 

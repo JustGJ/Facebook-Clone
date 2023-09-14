@@ -1,8 +1,8 @@
 import { BsMessenger } from "react-icons/bs";
 import { IoMdNotifications } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
-import { StyledNavbarActions } from "./styled";
-import ButtonIcon from "@components/common/buttons/ButtonIcon";
+import { ButtonIcon } from "@components/common/buttons/ButtonIcon";
+import { NavbarActionsContainer } from "./styled";
 
 const NavbarActions = () => {
   const actionButtons = [
@@ -11,11 +11,11 @@ const NavbarActions = () => {
     { id: 2, icon: <CgProfile /> },
   ];
   return (
-    <StyledNavbarActions>
+    <NavbarActionsContainer>
       {actionButtons.map((actionButton) => (
         <ButtonIcon key={actionButton.id}>{actionButton.icon}</ButtonIcon>
       ))}
-    </StyledNavbarActions>
+    </NavbarActionsContainer>
   );
 };
 

@@ -1,15 +1,15 @@
 import NavbarActions from "./NavbarActions";
 import NavbarNavigation from "./NavbarNavigation";
 import NavbarSearch from "./NavbarSearch";
-import { StyledNavbar } from "./styled";
+import { NavbarContainer } from "./styled";
 
 const Navbar = () => {
   return (
-    <StyledNavbar>
+    <NavbarContainer>
       <NavbarSearch />
       <NavbarNavigation />
       <NavbarActions />
-    </StyledNavbar>
+    </NavbarContainer>
   );
 };
 

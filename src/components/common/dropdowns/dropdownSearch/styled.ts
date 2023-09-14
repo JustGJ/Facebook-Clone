@@ -1,7 +1,7 @@
 import { box, flexLayout } from "@styles/helpers";
 import styled from "styled-components";
 
-export const StyledDropdownSearch = styled.div`
+export const DropdownSearchContainer = styled.div`
   position: absolute;
   ${box("327px", "517px")};
   top: 0;
@@ -32,14 +32,11 @@ export const Item = styled.div`
     cursor: pointer;
   }
 `;
-export const PictureContent = styled.div`
-  ${box("36px")};
-  width: 36px;
-  padding: 0px 15px 0 5px;
-`;
+
 export const Picture = styled.img`
-  ${box("100%")};
+  ${box("36px")};
   border-radius: 50%;
+  margin-right: 8px;
 `;
 export const Name = styled.span`
   color: ${({ theme }) => theme.primaryText};

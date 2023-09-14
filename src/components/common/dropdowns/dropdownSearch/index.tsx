@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useQuery } from "react-query";
 import { useUserStore } from "@business/useUserStore";
 import SearchItem from "./SearchItem";
-import { StyledDropdownSearch, Title } from "./styled";
+import { DropdownSearchContainer, Title } from "./styled";
 import Fade from "@components/common/Fade";
 
 interface IDropdownSearchProps {
@@ -42,14 +42,14 @@ const DropdownSearch = ({
 
   return (
     <Fade visible={isOpenSearch} duration={300} zIndex={-1}>
-      <StyledDropdownSearch ref={searchRef}>
+      <DropdownSearchContainer ref={searchRef}>
         <Title>Récent</Title>
         <ul>
           {users.slice(0, 8).map((user) => (
             <SearchItem key={user.id} name={user.name} />
           ))}
         </ul>
-      </StyledDropdownSearch>
+      </DropdownSearchContainer>
     </Fade>
   );
 };

@@ -1,5 +1,5 @@
 import StoryItem from "./StoryItem";
-import { StyledStories } from "./styled";
+import { StoriesContainer } from "./styled";
 
 const Stories = () => {
   const users = [
@@ -31,11 +31,11 @@ const Stories = () => {
   ];
 
   return (
-    <StyledStories>
+    <StoriesContainer>
       {users.map((user) => (
         <StoryItem key={user.id} name={user.name} avatar={user.avatar} />
       ))}
-    </StyledStories>
+    </StoriesContainer>
   );
 };
 

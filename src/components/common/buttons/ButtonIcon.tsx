@@ -1,10 +1,18 @@
-import { StyledButtonIcon } from "./styled";
+import { box, flexLayout } from "@styles/helpers";
+import styled from "styled-components";
 
-interface IButtonIconProps {
-  children: React.ReactNode;
-}
-const ButtonIcon = ({ children }: IButtonIconProps) => {
-  return <StyledButtonIcon>{children}</StyledButtonIcon>;
-};
+export const ButtonIcon = styled.button`
+  ${flexLayout({ display: "flex-center" })}
+  ${box("40px")};
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.iconBg};
+  color: ${({ theme }) => theme.primaryIcon};
+  transition: 0.2s ease;
 
-export default ButtonIcon;
+  &:hover {
+    background-color: ${({ theme }) => theme.iconBgHover};
+  }
+  svg {
+    ${box("18px")};
+  }
+`;

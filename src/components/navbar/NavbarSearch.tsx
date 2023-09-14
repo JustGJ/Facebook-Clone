@@ -2,9 +2,9 @@ import { useState } from "react";
 import {
   ArrowButton,
   LogoFacebookButton,
+  NavbarSearchContainer,
   SearchContent,
   SearchInput,
-  StyledNavbarSearch,
 } from "./styled";
 import { BsArrowLeft, BsFacebook } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -13,17 +13,20 @@ import DropdownSearch from "@components/common/dropdowns/dropdownSearch";
 const NavbarSearch = () => {
   const [isOpenSearch, setIsOpenSearch] = useState<boolean>(false);
 
+  const renderSearchButton = () =>
+    isOpenSearch ? (
+      <ArrowButton>
+        <BsArrowLeft />
+      </ArrowButton>
+    ) : (
+      <LogoFacebookButton>
+        <BsFacebook />
+      </LogoFacebookButton>
+    );
+
   return (
-    <StyledNavbarSearch>
-      {isOpenSearch ? (
-        <ArrowButton>
-          <BsArrowLeft />
-        </ArrowButton>
-      ) : (
-        <LogoFacebookButton>
-          <BsFacebook />
-        </LogoFacebookButton>
-      )}
+    <NavbarSearchContainer>
+      {renderSearchButton()}
       <SearchContent>
         <AiOutlineSearch />
         <SearchInput
@@ -36,7 +39,7 @@ const NavbarSearch = () => {
           setIsOpenSearch={setIsOpenSearch}
         />
       </SearchContent>
-    </StyledNavbarSearch>
+    </NavbarSearchContainer>
   );
 };
 

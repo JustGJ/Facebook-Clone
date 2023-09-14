@@ -1,4 +1,4 @@
-import { Item, Picture, PictureContent, Name } from "./styled";
+import { Item, Picture, Name } from "./styled";
 
 interface DropdownSearchItemProps {
   key: number;
@@ -8,9 +8,7 @@ interface DropdownSearchItemProps {
 const DropdownSearchItem = ({ name }: DropdownSearchItemProps) => {
   return (
     <Item>
-      <PictureContent>
-        <Picture src="https://picsum.photos/200/300" alt="profile" />
-      </PictureContent>
+      <Picture src="https://picsum.photos/200/300" alt="profile" />
       <Name>{name}</Name>
     </Item>
   );
